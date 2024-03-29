@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" href="/css/body.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<%- include('./common/header/index') %>
+
+<main>
+    <body>
+        <div class="main-content">
+            <h2 class="bod mt-2 text-center">Welcome to Crypto Hub</h2>
+            <p class="bod mt-4 mb-5 text-center">This website contains all the latest Crypto news, market prices and more..</p>
+            <div class="link-container">
+                <div class="mb-5 p-2 image-container">
+                    <a href="/news">
+                        <img src="/images/news.png" alt="News">
+                        <div class="button-overlay">
+                            <button>Go to News</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="mb-5 p-2 image-container">
+                    <a href="/currencies">
+                        <img src="/images/market.png" alt="Cryptocurrencies">
+                        <div class="button-overlay">
+                            <button>Go to Market</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</main>
+
+<%- include('./common/footer/index') %>

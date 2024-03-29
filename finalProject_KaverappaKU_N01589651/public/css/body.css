@@ -1,0 +1,38 @@
+body{
+    background-color: #7D7994 !important;
+}
+
+.card {
+    height: 100%; 
+    background-color: #8E8F4A !important;
+    border-radius: 30px !important;
+}
+
+.card-body {
+    display: flex; 
+    flex-direction: column;
+}
+
+.main-container h2, h5, p{
+    color: white;
+    font-family: "Reddit Mono", monospace;
+}
+
+.main-container{
+    padding: 2rem !important;
+}
+
+.btn {
+    background-color: yellowgreen !important;
+    color: white !important;
+    border-radius: 20px !important;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1); 
+}
+
+.card-text a{
+    color: yellowgreen !important;
+}

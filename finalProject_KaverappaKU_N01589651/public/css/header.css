@@ -1,0 +1,51 @@
+header{
+    padding: 10px 20px;
+    align-items: center;
+    color: yellowgreen;
+}
+
+.main-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-name{
+    font-family: "Rubik Scribble", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.brand-name h1 a{
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+.navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li{
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li:first-child {
+    margin-left: 0;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:x-large;
+    color: yellowgreen;
+}
+
+.navbar ul li a:hover {
+    background-color: yellowgreen;
+    color: white; 
+    padding: 10px;
+}

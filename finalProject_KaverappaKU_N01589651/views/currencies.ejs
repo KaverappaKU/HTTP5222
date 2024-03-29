@@ -1,0 +1,74 @@
+<%- include('./common/header/index') %>
+<head>
+    <link rel="stylesheet" href="/css/currencies.css">
+    <link rel="stylesheet" href="/css/body.css">
+</head>
+<main class="main-currency">
+    <h2 class="pl-4">Top Cryptocurrencies</h2>
+    <div class="search-bar container-fluid mt-3">
+        <form id="searchForm" method="post" action="/search" class="row">
+            <div class="input-group m-2">
+                <div class="mr-4">
+                    <input type="text" class="form-control m-3" id="searchInput" placeholder="Search" name="searchQuery">
+                </div>
+                <div class="input-group-append m-3">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="table-container p-4">
+        <table class="table table-rounded">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Rank</th>
+                    <th>Coin</th>
+                    <th>Symbol</th>
+                    <th>Price (USD)</th>
+                    <th>Market Cap (USD)</th>
+                    <th>24h Change (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cryptocurrencyData.forEach(crypto => { %>
+                    <tr>
+                        <td><%= crypto.rank %></td>
+                        <td><%= crypto.name %></td>
+                        <td><%= crypto.symbol.toUpperCase() %></td>
+                        <td><%= Number(crypto.priceUsd).toFixed(2) %></td>
+                        <td><%= Number(crypto.marketCapUsd).toFixed(2) %></td>
+                        <td><%= Number(crypto.changePercent24Hr).toFixed(2) %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-3" id="searchResults"></div>
+</main>
+<!-- Bootstrap JS and dependencies (optional) -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+<!-- <script>
+    document.getElementById('searchForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const searchQuery = document.getElementById('searchInput').value;
+         const searchResultsContainer = document.getElementById('searchResults');
+
+        try {
+            const response = await fetch(`/search?q=${encodeURIComponent(searchQuery)}`);
+            const data = await response.json();
+            const filteredData = data.filter(crypto => {
+                return crypto.name.toLowerCase().includes(searchQuery) || crypto.symbol.toLowerCase().includes(searchQuery);
+            });
+            console.log(filteredData)
+        } catch (error) {
+            console.error('Error:', error);
+            searchResultsContainer.innerHTML = '<div class="alert alert-danger" role="alert">An error occurred while processing the search request.</div>';
+        }
+    });
+</script> -->
+
+<%- include('./common/footer/index') %>

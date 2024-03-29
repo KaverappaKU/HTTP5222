@@ -1,0 +1,56 @@
+.link-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.main-content h2, p{
+    color: white;
+    font-family: "Reddit Mono", monospace;
+}
+
+.link-container .image-container img {
+    width: 100%;
+    border-radius: 20px;
+    height: 500px;
+    cursor: pointer;
+}
+
+.link-container .image-container:hover img {
+    filter: blur(5px);
+}
+
+.link-container .image-container .button-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.link-container .image-container:hover .button-overlay {
+    opacity: 1;
+}
+
+.link-container .image-container .button-overlay button {
+    background-color: transparent;
+    border: none;
+    color: yellowgreen;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.link-container .image-container {
+    position: relative;
+    margin: 0 20px;
+}
+
+.main-content{
+    padding: 1rem;
+}

@@ -1,0 +1,41 @@
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd; 
+    text-align: left; 
+}
+
+th {
+    background-color: #f2f2f2; 
+    font-weight: bold;
+}
+
+.active {
+    background: red;
+    color: #fff;
+}
+
+.nonActive {
+    background: transparent;
+}
+
+.main-currency{
+    padding: 20px;
+}
+
+.main-currency h2{
+    color: white;
+}
+
+.main-currency h2{
+    color: white;
+    font-family: "Reddit Mono", monospace;
+}
